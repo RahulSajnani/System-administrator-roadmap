@@ -20,7 +20,7 @@ To setup Prometheus, we need to have Prometheus server that queries node exporte
 
 #### 1. Download Prometheus
 
-Check out the Prometheus download page and download the appropriate monitoring system for your Operating system [Download page](https://prometheus.io/download/). I am using Ubuntu so I will go ahead and download the monitoring system for linux  as displayed in the image below:
+Check out the Prometheus download page and download the appropriate monitoring system for your Operating system [Download page](https://prometheus.io/download/). I am using Ubuntu so I will go ahead and download the monitoring system for Linux as displayed in the image below:
 
 ![Download Prometheus monitoring tool](./images/download_prometheus.png)
 
@@ -50,7 +50,7 @@ For this tutorial, I am setting a node exporter for my local system so that the 
 
 #### 1. Download the node exporter
 
-Check out the Prometheus download page and download the appropriate node exporter for your Operating system [Download page](https://prometheus.io/download/). I am using Ubuntu so I will go ahead and download the node exporter for linux as displayed in the image below:
+Check out the Prometheus download page and download the appropriate node exporter for your Operating system [Download page](https://prometheus.io/download/). I am using Ubuntu so I will go ahead and download the node exporter for Linux as displayed in the image below:
 
 ![Node exporter](./images/node_exporter.png)
 
@@ -106,5 +106,10 @@ scrape_configs:
 #--------------------------------------------------------------------------------------------
 ```
 
-#### 4. Restart prometheus
+#### 4. Restart Prometheus monitoring system
+
+```bash
+# Restart with hangup signal so you dont lose previous monitoring data
+kill -s HUP <prometheus-monitoring-tool-pid>
+```
 
